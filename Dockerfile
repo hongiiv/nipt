@@ -6,7 +6,7 @@ LABEL www.ngenebio.com="NGeneBio" version="1.0.0" description="Docker NIPT"
 
 USER root
 
-RUN apt-get -qq update && apt-get -qq -y install curl bzip2 && apt-get -qq -y install git \
+RUN apt-get -qq update && apt-get -qq -y install curl bzip2 && apt-get -qq -y install git r-base \
     && curl -sSL https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -o /tmp/miniconda.sh \
     && bash /tmp/miniconda.sh -bfp /usr/local \
     && rm -rf /tmp/miniconda.sh \
