@@ -1,0 +1,14 @@
+certifi==2018.10.15
+colormath==3.0.0
+cycler==0.10.0
+decorator==4.3.0
+kiwisolver==1.0.1
+matplotlib==3.0.0
+networkx==2.2
+numpy==1.15.3
+pandas==0.23.4
+pyparsing==2.2.2
+python-dateutil==2.7.3
+pytz==2018.6
+PyVCF==0.6.8
+six==1.11.0
