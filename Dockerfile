@@ -10,7 +10,7 @@ RUN apt-get -qq update && DEBIAN_FRONTEND=noninteractive apt-get install -y tzda
     && curl -sSL https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -o /tmp/miniconda.sh \
     && bash /tmp/miniconda.sh -bfp /usr/local \
     && rm -rf /tmp/miniconda.sh \
-    && conda install -y python=2 \
+    && conda install -y python=3 \
     && conda update conda \
     && conda config --append channels conda-forge \
     && apt-get -qq -y remove curl bzip2 \
@@ -20,6 +20,7 @@ RUN apt-get -qq update && DEBIAN_FRONTEND=noninteractive apt-get install -y tzda
     && conda clean --all --yes
 
 RUN conda install numpy scipy scikit-learn numexpr
+RUN conda install -c bioconda bedtools
 
 ENV PATH /opt/conda/bin:$PATH
 

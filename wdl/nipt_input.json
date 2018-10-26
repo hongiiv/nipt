@@ -1,0 +1,7 @@
+{
+  "NIPTWf.hg19_bins": "gs://ngb_cloud/nipt/bins",
+  "NIPTWf.hg19_gc": "gs://ngb_cloud/nipt/gc.txt",
+  "NIPTWf.sample_bam": "gs://ngb_cloud/nipt/HG00272.mapped.ILLUMINA.bwa.FIN.low_coverage.20101123.bam",
+  "NIPTWf.window_size_override": "100000",
+  "NIPTWf.hg19_chrom_size": "gs://ngb_cloud/nipt/hg19.chrom.sizes"
+}
