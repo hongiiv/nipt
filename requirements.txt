@@ -16,8 +16,6 @@ kiwisolver==1.0.1
 MarkupSafe==1.0
 matplotlib==3.0.0
 mccabe==0.6.1
-mkl-fft==1.0.6
-mkl-random==1.0.1
 mock==2.0.0
 more-itertools==4.3.0
 networkx==2.2
@@ -43,6 +41,5 @@ rpy2==2.9.4
 scikit-learn==0.20.0
 scipy==1.1.0
 six==1.10.0
-sklearn==0.0
 tornado==5.1.1
 urllib3==1.12

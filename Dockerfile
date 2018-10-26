@@ -6,17 +6,20 @@ LABEL www.ngenebio.com="NGeneBio" version="1.0.0" description="Docker NIPT"
 
 USER root
 
-RUN apt-get -qq update && apt-get -qq -y install curl bzip2 && apt-get -qq -y install git r-base \
+RUN apt-get -qq update && DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata && apt-get -qq -y install curl bzip2 && apt-get -qq -y install git r-base \
     && curl -sSL https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -o /tmp/miniconda.sh \
     && bash /tmp/miniconda.sh -bfp /usr/local \
     && rm -rf /tmp/miniconda.sh \
     && conda install -y python=2 \
     && conda update conda \
+    && conda config --append channels conda-forge \
     && apt-get -qq -y remove curl bzip2 \
     && apt-get -qq -y autoremove \
     && apt-get autoclean \
     && rm -rf /var/lib/apt/lists/* /var/log/dpkg.log \
     && conda clean --all --yes
+
+RUN conda install numpy scipy scikit-learn numexpr
 
 ENV PATH /opt/conda/bin:$PATH
 
