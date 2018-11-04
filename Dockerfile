@@ -45,6 +45,7 @@ WORKDIR $INSTALL_PATH
 
 COPY docker/install_ngenebio_ngs.sh $NGENEBIO_NGS_PATH/docker/
 COPY requirements-minimal.txt $NGENEBIO_NGS_PATH/
+COPY bedtools /usr/bin
 RUN chmod +x $NGENEBIO_NGS_PATH/docker/install_ngenebio_ngs.sh 
 COPY requirements-conda.txt requirements-conda-tests.txt requirements-py3.txt requirements.txt $NGENEBIO_NGS_PATH/
 RUN $NGENEBIO_NGS_PATH/docker/install_ngenebio_ngs.sh minimal

@@ -1,0 +1,12 @@
+2018-10-26 16:25:02,003 INFO  - MaterializeWorkflowDescriptorActor [UUID(cba1393c)]: Parsing workflow as WDL draft-2
+2018-10-26 16:25:02,680 INFO  - MaterializeWorkflowDescriptorActor [UUID(cba1393c)]: Call-to-Backend assignments: NIPTWf.CreateBin -> JES, NIPTWf.BuildCoverage -> JES, NIPTWf.RunNipt -> JES
+2018-10-26 16:25:05,139 INFO  - WorkflowExecutionActor-cba1393c-01d5-4817-bbf7-b7d45997c0e5 [UUID(cba1393c)]: Starting NIPTWf.RunNipt
+2018-10-26 16:25:06,922 INFO  - PipelinesApiAsyncBackendJobExecutionActor [UUID(cba1393c)NIPTWf.RunNipt:NA:1]: `sleep 1000000
+source activate env
+cd /cromwell_root
+python /cromwell_root/ngb_cloud/nipt/nipt2.py /cromwell_root/ngb_cloud/nipt/cov.bins`
+2018-10-26 16:25:40,903 INFO  - PipelinesApiAsyncBackendJobExecutionActor [UUID(cba1393c)NIPTWf.RunNipt:NA:1]: job id: operations/ELS8jvrqLBirhu6Yzffg_-gBIMiRiJ3_CyoPcHJvZHVjdGlvblF1ZXVl
+2018-10-26 16:26:09,573 INFO  - PipelinesApiAsyncBackendJobExecutionActor [UUID(cba1393c)NIPTWf.RunNipt:NA:1]: Status change from - to Running
+2018-10-26 16:39:31,406 INFO  - WorkflowExecutionActor-cba1393c-01d5-4817-bbf7-b7d45997c0e5 [UUID(cba1393c)]: Aborting workflow
+2018-10-26 16:39:31,412 INFO  - PipelinesApiAsyncBackendJobExecutionActor [UUID(cba1393c)NIPTWf.RunNipt:NA:1]: PipelinesApiAsyncBackendJobExecutionActor [UUID(cba1393c):NIPTWf.RunNipt:NA:1] Aborted StandardAsyncJob(operations/ELS8jvrqLBirhu6Yzffg_-gBIMiRiJ3_CyoPcHJvZHVjdGlvblF1ZXVl)
+2018-10-26 16:39:34,765 INFO  - PipelinesApiAsyncBackendJobExecutionActor [UUID(cba1393c)NIPTWf.RunNipt:NA:1]: Successfully requested cancellation of operations/ELS8jvrqLBirhu6Yzffg_-gBIMiRiJ3_CyoPcHJvZHVjdGlvblF1ZXVl
